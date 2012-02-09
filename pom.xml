@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>net.pocorall</groupId>
+	<artifactId>syncmap</artifactId>
+	<packaging>jar</packaging>
+	<version>0.2.2</version>
+	<description>Lightweight distributed object map
+	</description>
+	<url>http://eventAnalytics.sf.net</url>
+	<parent>
+		<groupId>net.pocorall</groupId>
+		<artifactId>pocorall-base-pom</artifactId>
+		<version>1.0</version>
+		<relativePath>../pocorall-android-base-pom/pom.xml</relativePath>
+	</parent>
+	<dependencies>
+		<dependency>
+			<groupId>net.pocorall</groupId>
+			<artifactId>pocorall-common</artifactId>
+			<version>${pocorall.common.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>1.8.1.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>${json.version}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.1.2</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<licenses>
+		<license>
+			<name>Apache 2</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+			<comments>A business-friendly OSS license</comments>
+		</license>
+	</licenses>
+</project>
