@@ -1,8 +1,8 @@
- **SyncMap** is a lightweight JSON object map for **synchronized client data**.
+**SyncMap** is a lightweight JSON object map for **synchronized client data**.
 
-Suppose you have to write a feature similar to bookmark synchronization of Google Chrome. When a new bookmark is added, the browser notify a bookmark server. Then the server updates persistent repository(DB) and broadcast the update notification to all the clients listening the user's activity.
+Suppose you have to write a feature similar to bookmark synchronization of Google Chrome. When a browser added a new bookmark, the browser notify it to a bookmark server. Then the server updates persistent repository(DB) and broadcast the update notification to all the clients listening the user's activity.
 
-SyncMap is fit for this requirement. Client uses a SyncMap object as an ordinary Map collection. All the works related to synchronization is managed behind the scene. Let's start with an example client.
+**SyncMap** is fit for this requirement. Client uses a SyncMap object as if it is an ordinary Map collection. All the works related to the synchronization is managed behind the scene. Let's start with an example client.
 
 ## Client example
 
@@ -13,7 +13,6 @@ SyncMap is fit for this requirement. Client uses a SyncMap object as an ordinary
     }
     // put() is a non-blocking op. i.e. the function returns immediately.
     map.put("http://somewhere.com", new JSONObject("{note:\"Favorate site!\"}")); 
-
 
 ## Server example
 
