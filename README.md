@@ -4,7 +4,8 @@ Suppose you have to write a feature similar to bookmark synchronization of Googl
 
 SyncMap is fit for this requirement. Client uses a SyncMap object as if it is an ordinary Map collection. All the works related to the synchronization is managed behind the scene. 
 
-![](github/update.png)
+
+<p align="center"><img src="/pocorall/syncmap/raw/master/github/update.png"/></p>
 
 ## Features
 
